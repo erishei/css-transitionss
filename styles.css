@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100vh;
+    width: 500px;
+}
+
+div {
+    background-color: purple;
+    font-size: 2rem;
+    color: lightgoldenrodyellow;
+    width: 400px;
+    height: 400px;
+    /*transition: 500ms;*/
+    /*    write in milliseconds - 1000=1sec */
+    transition: color 500ms;
+    /*  The color changes in 1000ms the background changes instantly
+        - property duration -
+        can also be written like this:*/
+    transition-property: background-color;
+    transition-duration: 1s;
+
+    /*  transition-property:; is "all" by default  */
+    /*  transition: all 100ms; also works if you want to write shorthand */
+
+    /*transition: background-color 500ms;*/
+}
+
+div:hover {
+    background-color: plum;
+    color: purple;
+}
+
+section {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    height: 400px;
+    width: 400px;
+    transition: color 1s, background-color 2s ease-in-out;
+
+    /*transition: all 2000ms ease-in;*/
+    /*  The animation starts slow and finishes fast  */
+
+    /*transition: all 2000ms ease-out;*/
+    /*  Animation starts fast and finishes slow*/
+    /*  Ease in-out starts and finishes fast with a slower middle */
+    /*  Default is "linear" */
+
+}
+
+section:hover {
+    background-color: white;
+    color: black;
+}
+
+/*  check out mdn web docs transition examples using margins etc */
+.btn {
+    /*height: 64px;*/
+    /*width: 128ox;*/
+    font-size: 1rem;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(50, 202, 90, 1);
+}
+
+.btn-hide {
+    opacity: .7;
+    transition: opacity 500ms;
+}
+
+.btn-hide:hover {
+    opacity: 1;
+}
+
+.btn-hide:focus {
+    opacity: 0;
+/*  Important to remember that even though the btn isn't showing it is still there
+    in the dom, including spacing etc */
+}
+
+
+.btn-change {
+    transition: color, background-color;
+    transition-duration: 500ms;
+}
+
+.btn-change:focus {
+    color: orangered;
+    background-color: lightskyblue;
+}
+
+/* btn-bigger won't work properly for some reason? */
+
+.btn-bigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: color, background-color, padding;
+}
+
+.btn-bigger:hover {
+    padding: 2rem;
+    /*height: 100px;*/
+    /*width: 300px;*/
+}
