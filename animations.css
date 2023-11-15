@@ -1,3 +1,92 @@
 * {
     box-sizing: border-box;
 }
+
+.fade-in-box {
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    border-radius: 100%;
+    /* A-name refers to the key name */
+    animation-name: fadeIn;
+    /* A-duration refers to how long it will take to complete the animaton */
+    animation-duration: 3s;
+    /* A-timing-function tells it how to - default is linear */
+    animation-timing-function: ease-in-out;
+    /* A-iteration-count tells it how many times it should repeat the animation */
+    animation-iteration-count: infinite;
+
+    /* animation: fadeIn 1s ease-in-out infinite;      -- Shorthand */
+
+}
+
+
+/* Key frame: life cycle of the div. Key frame is a rule
+   Notice the use of camelCase in keyframes */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 400px;
+    width: 200px;
+    border-radius: 1rem;
+    background-color: black;
+    animation-iteration-count: infinite;
+}
+
+.traffic-light:hover {
+    animation-play-state: paused;
+}
+
+.red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 100%;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+.yellow {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 100%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+
+
+}
+
+.green {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 100%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
