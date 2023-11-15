@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        /*    switch positions on 360 and 0 to rotate in opposite directions */
+        }
+
+        .rotating-spinner {
+            width: 300px;
+            height: 300px;
+            background-image: url("img.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: rotate;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="rotating-spinner">
+
+</div>
+
+</body>
+</html>
